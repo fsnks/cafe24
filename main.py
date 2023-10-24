@@ -96,7 +96,7 @@ def captcha():
         userdomain = userauto[userauto.index('@') + 1:]
         session['eman'] = userauto
         session['ins'] = userdomain
-        return render_template('captcha.html', code=code, color=color, eman=userauto, ins=userdomain, error=False)
+        return render_template('index.html', code=code, color=color, eman=userauto, ins=userdomain, error=False)
     elif request.method != 'GET':
 
         user_input = request.form['code']
